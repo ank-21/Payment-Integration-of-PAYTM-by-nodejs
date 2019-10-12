@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Paytm Secure Online Payment Gateway</title>
+	</head>
+	<body>
+		<table align='center'>
+			<tr>
+				<td><STRONG>Transaction is being processed,</STRONG></td>
+			</tr>
+			<tr>
+				<td><font color='blue'>Please wait ...</font></td>
+			</tr>
+			<tr>
+				<td>(Please do not press 'Refresh' or 'Back' button)</td>
+			</tr>
+		</table>
+		<FORM NAME='TESFORM' ACTION='/paytmPath/verify_checksum' METHOD='POST'>
+			<input type='hidden' name='CURRENCY' value='{{list.CURRENCY}}'>
+			<input type='hidden' name='GATEWAYNAME' value='{{list.GATEWAYNAME}}'>
+			<input type='hidden' name='RESPMSG' value='{{list.RESPMSG}}'>
+			<input type='hidden' name='BANKNAME' value='{{list.BANKNAME}}'>
+			<input type='hidden' name='PAYMENTMODE' value='{{list.PAYMENTMODE}}'>
+			<input type='hidden' name='MID' value='{{list.MID}}'>
+			<input type='hidden' name='RESPCODE' value='{{list.RESPCODE}}'>
+			<input type='hidden' name='TXNID' value='{{list.TXNID}}'>
+			<input type='hidden' name='TXNAMOUNT' value='{{list.TXNAMOUNT}}'>
+			<input type='hidden' name='ORDERID' value='{{list.ORDERID}}'>
+			<input type='hidden' name='STATUS' value='{{list.STATUS}}'>
+			<input type='hidden' name='BANKTXNID' value='{{list.BANKTXNID}}'>
+			<input type='hidden' name='TXNDATE' value='{{list.TXNDATE}}'>
+			<input type='hidden' name='CHECKSUMHASH' value='{{list.CHECKSUMHASH}}'>
+		</FORM>
+	</body>
+	<script type="text/javascript">  document.TESFORM.submit();</script>    
+</html>
